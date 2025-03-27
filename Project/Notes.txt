@@ -1,0 +1,26 @@
+🔎 Qu’est-ce qu’un Vision Transformer (ViT-B) ?
+Le Vision Transformer (ViT) est un modèle d’apprentissage profond spécialement conçu pour traiter des images en utilisant l’architecture des transformers (comme en NLP avec BERT ou GPT).
+Il a été introduit par Google dans l’article :
+"An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale" (2020)
+
+📖 Principe général du ViT :
+Contrairement aux CNN classiques (comme ResNet), ViT ne travaille pas sur des pixels entiers ou des convolutions, mais :
+
+Découpe l’image en petits patchs (par exemple des morceaux de 16x16 pixels)
+
+Aplati chaque patch et le transforme en un vecteur (embedding)
+
+Ajoute un "position embedding" pour ne pas perdre la localisation spatiale
+
+Envoie cette séquence de vecteurs dans un Transformer Encoder (comme en NLP)
+
+Produit une classe prédite à la fin (classification ImageNet dans ton cas)
+
+📦 Dans ton cas - ViT-B (Base) :
+Base = la taille du modèle (86M de paramètres environ)
+
+Patch size = 16x16 pixels
+
+Entrée image = 224x224 pixels
+
+Output = Une des 1000 classes ImageNet (chat, voiture, avion, etc.)
